@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="helloserver:war exploded">
+    <output-path>$PROJECT_DIR$/helloserver/target/helloserver</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="helloserver" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="helloslc-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="helloslc" />
+          </element>
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/com/zeroc/Ice/3.4.2/Ice-3.4.2.jar" output-file-name="ice-3.4.2.jar" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/helloserver/target/helloserver/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="helloserver/web/Web" />
+    </root>
+  </artifact>
+</component>

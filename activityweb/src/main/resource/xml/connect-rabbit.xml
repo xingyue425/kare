@@ -23,7 +23,7 @@
 	<rabbit:queue name="bonusQueue" auto-declare="true" durable="true" />
 	<bean name="bonusHandler" class="com.zk.listener.BonusReceiveListener" />
 	<rabbit:listener-container
-			connection-factory="connectionFactory">
+			connection-factory="connectionFactory" acknowledge="manual">
 		<rabbit:listener ref="bonusHandler" queues="bonusQueue" />
 	</rabbit:listener-container>
 
